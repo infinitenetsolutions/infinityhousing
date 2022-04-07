@@ -84,6 +84,14 @@ $property_image_data = mysqli_query($conn,$property_image);
 while($property_image_result = mysqli_fetch_assoc($property_image_data)){
 $prop_id = $property_image_result['id'];
 
+// property type
+$property_type = "SELECT * FROM `orexl_apartment_obj_type`where ";
+$property_type_data = mysqli_query($conn,$property_type);
+while($property_type_result = mysqli_fetch_assoc($property_type_data)){
+print_r($property_type_result['type']);
+}
+
+
 
 $properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
 $properties_images_data = mysqli_query($conn,$properties_images);
@@ -106,7 +114,7 @@ while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row mb-3">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-6">
                                             <ul class="property-list list-unstyled">
                                                 <li><b>Property ID:</b> <?php echo $property_single_result['id']?></li>
                                                 <li><b>Property Type:</b> <?php echo $property_single_result['id']?></li>
@@ -116,7 +124,7 @@ while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
                                                 <!-- <li><b>Bathrooms:</b> 2</li> -->
                                             </ul>
                                         </div>
-                                        <!-- <div class="col-sm-6">
+                                        <div class="col-sm-6">
                                             <ul class="property-list list-unstyled">
                                                 <li><b>Garage:</b> 1</li>
                                                 <li><b>Garage Size:</b> 458 SqFt</li>
@@ -124,7 +132,7 @@ while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
                                                 <li><b>Property Type:</b> Full Family Home</li>
                                                 <li><b>Property Status:</b> For rent</li>
                                             </ul>
-                                        </div> -->
+                                        </div>
                                     </div>
                                     <!-- <h6 class="text-primary mb-3 mb-sm-0">Additional details</h6>
                                     <div class="row">
