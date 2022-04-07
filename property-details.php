@@ -1,4 +1,25 @@
-<?php include "include/header.php"?>
+<?php include "include/header.php";
+$id = $_GET['id'];
+$property_single = "SELECT * FROM `orexl_apartment` where `id`='$id'";
+$property_single_data = mysqli_query($conn,$property_single);
+$property_single_result = mysqli_fetch_assoc($property_single_data);
+// print_r($property_single_result);
+
+$property_image = "SELECT * FROM `orexl_apartment`";
+$property_image_data = mysqli_query($conn,$property_image);
+while($property_image_result = mysqli_fetch_assoc($property_image_data)){
+$prop_id = $property_image_result['id'];
+
+
+$properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
+$properties_images_data = mysqli_query($conn,$properties_images);
+while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
+
+//    print_r ($properties_images_result['file_name']);
+
+}
+}
+?>
 
     <!--=================================
 Breadcrumb -->
@@ -7,9 +28,9 @@ Breadcrumb -->
             <div class="row">
                 <div class="col-12">
                     <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="index-2.html"> <i class="fas fa-home"></i> </a></li>
-                        <li class="breadcrumb-item"> <i class="fas fa-chevron-right"></i> <a href="#">Pages</a></li>
-                        <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> Stunning 2 bedroom home in village</span></li>
+                        <li class="breadcrumb-item"><a href="index.php"> <i class="fas fa-home"></i> </a></li>
+                        <!-- <li class="breadcrumb-item"> <i class="fas fa-chevron-right"></i> <a href="#">Pages</a></li> -->
+                        <li class="breadcrumb-item active"> <i class="fas fa-chevron-right"></i> <span> <?php echo $property_single_result['title_en']?></span></li>
                     </ol>
                 </div>
             </div>
@@ -18,7 +39,7 @@ Breadcrumb -->
     <!--=================================
 Breadcrumb -->
 
-    <div class="wrapper">
+    <div class="wrapper">   
         <!--=================================
   Property details -->
         <section class="space-pt">
@@ -27,26 +48,11 @@ Breadcrumb -->
                     <div class="col-lg-4 mb-5 mb-lg-0 order-lg-2">
                         <div class="sticky-top">
                             <div class="mb-4">
-                                <h3>Stunning 2 bedroom home in village</h3>
-                                <span class="d-block mb-3"><i class="fas fa-map-marker-alt fa-xs pe-2"></i>Virginia drive temple hills</span>
-                                <span class="price font-xll text-primary d-block">$1500000</span>
-                                <span class="sub-price font-lg text-dark d-block"><b>$6,500/Sqft </b> </span>
-                                <ul class="property-detail-meta list-unstyled ">
-                                    <li><a href="#"> <i class="fas fa-star text-warning pe-2"></i>3.9/5 </a></li>
-                                    <li class="share-box">
-                                        <a href="#"> <i class="fas fa-share-alt"></i> </a>
-                                        <ul class="list-unstyled share-box-social">
-                                            <li> <a href="#"><i class="fab fa-facebook-f"></i></a> </li>
-                                            <li> <a href="#"><i class="fab fa-twitter"></i></a> </li>
-                                            <li> <a href="#"><i class="fab fa-linkedin"></i></a> </li>
-                                            <li> <a href="#"><i class="fab fa-instagram"></i></a> </li>
-                                            <li> <a href="#"><i class="fab fa-pinterest"></i></a> </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#"> <i class="fas fa-heart"></i> </a></li>
-                                    <li><a href="#"> <i class="fas fa-exchange-alt"></i> </a></li>
-                                    <li><a href="#"> <i class="fas fa-print"></i> </a></li>
-                                </ul>
+                                <h3><?php echo $property_single_result['title_en']?></h3>
+                                <span class="d-block mb-3"><i class="fas fa-map-marker-alt fa-xs pe-2"></i><?php echo $property_single_result['address_en']?></span>
+                                <!-- <span class="price font-xll text-primary d-block">Rs <?php echo $property_single_result['price']?></span> -->
+                                <span class="sub-price font-lg text-dark d-block"><b>Rs <?php echo $property_single_result['price']?> / Sq ft </b> </span>
+                                
                             </div>
                             <div class="agent-contact">
                                 <div class="d-flex align-items-center p-4 border border-bottom-0">
@@ -66,15 +72,31 @@ Breadcrumb -->
                             </div>
                         </div>
                     </div>
+
+
                     <div class="col-lg-8 order-lg-1">
                         <div class="property-detail-img popup-gallery">
                             <div class="owl-carousel" data-animateOut="fadeOut" data-nav-arrow="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0" data-loop="true">
-                                <div class="item">
-                                    <a class="portfolio-img" href="images/property/big-img-01.jpg"><img class="img-fluid" src="images/property/big-img-01.jpg" alt=""></a>
+                              <?php
+
+$property_image = "SELECT * FROM `orexl_apartment`";
+$property_image_data = mysqli_query($conn,$property_image);
+while($property_image_result = mysqli_fetch_assoc($property_image_data)){
+$prop_id = $property_image_result['id'];
+
+
+$properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
+$properties_images_data = mysqli_query($conn,$properties_images);
+while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
+
+//    print_r ($properties_images_result['file_name']);?>
+
+                      <div class="item">
+                                    <a class="portfolio-img" href="images/<?php echo $properties_images_result['file_name']?>">
+                                    <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name']?>" alt=""></a>
                                 </div>
-                                <div class="item">
-                                    <a class="portfolio-img" href="images/property/big-img-02.jpg"><img class="img-fluid" src="images/property/big-img-02.jpg" alt=""></a>
-                                </div>
+
+                               <?php }}?>
                             </div>
                         </div>
                         <div class="property-info mt-5">
@@ -84,16 +106,17 @@ Breadcrumb -->
                                 </div>
                                 <div class="col-sm-9">
                                     <div class="row mb-3">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <ul class="property-list list-unstyled">
-                                                <li><b>Property ID:</b> RV151</li>
-                                                <li><b>Price:</b> $484,400</li>
-                                                <li><b>Property Size:</b> 1466 Sq Ft</li>
-                                                <li><b>Bedrooms:</b> 4</li>
-                                                <li><b>Bathrooms:</b> 2</li>
+                                                <li><b>Property ID:</b> <?php echo $property_single_result['id']?></li>
+                                                <li><b>Property Type:</b> <?php echo $property_single_result['id']?></li>
+                                                <li><b>Price:</b> <?php echo $property_single_result['price']?> / Sq Ft</li>
+                                                <li><b>Property Size:</b> <?php echo $property_single_result['square']?> Sq Ft</li>
+                                                <li><b>Bedrooms:</b> <?php echo $property_single_result['num_of_rooms']?></li>
+                                                <!-- <li><b>Bathrooms:</b> 2</li> -->
                                             </ul>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <!-- <div class="col-sm-6">
                                             <ul class="property-list list-unstyled">
                                                 <li><b>Garage:</b> 1</li>
                                                 <li><b>Garage Size:</b> 458 SqFt</li>
@@ -101,9 +124,9 @@ Breadcrumb -->
                                                 <li><b>Property Type:</b> Full Family Home</li>
                                                 <li><b>Property Status:</b> For rent</li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </div>
-                                    <h6 class="text-primary mb-3 mb-sm-0">Additional details</h6>
+                                    <!-- <h6 class="text-primary mb-3 mb-sm-0">Additional details</h6>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <ul class="property-list list-unstyled mb-0">
@@ -119,7 +142,7 @@ Breadcrumb -->
                                                 <li><b>Equipment:</b> Grill - Gas - light</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

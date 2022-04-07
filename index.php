@@ -319,7 +319,7 @@ $properties_images_result = mysqli_fetch_assoc($properties_images_data);
                             </ul>
                         </div>
                         <div class="property-btn">
-                            <a class="property-link" href="property-detail-style-01.html">See Details</a>
+                            <a class="property-link" href="property-details.php?id=<?php echo $display_all_prop_data1['id']?>">See Details</a>
                             <!-- <ul class="property-listing-actions list-unstyled mb-0">
                                 <li class="property-compare">
                                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="Compare" href="#"><i class="fas fa-exchange-alt"></i></a>
