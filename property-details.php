@@ -74,7 +74,7 @@ Breadcrumb -->
                             </div>
                             <div class="d-flex">
                                 <!-- <a href="#" class="btn btn-dark col b-radius-none">View listings</a> -->
-                                <a href="#" class="btn btn-primary col ms-0 b-radius-none">Request info</a>
+                                <a href="#"  data-bs-toggle="modal" data-bs-target="#loginModal1" class="btn btn-primary col ms-0 b-radius-none">Request info</a>
                             </div>
                         </div>
                     </div>
