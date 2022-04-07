@@ -1,6 +1,7 @@
 <style>
     .property-list li,
-    p,.property-list-style-2 li {
+    p,
+    .property-list-style-2 li {
         color: #000 !important;
     }
 </style>
@@ -72,7 +73,7 @@ Breadcrumb -->
                                 </div>
                             </div>
                             <div class="d-flex">
-                                <a href="#" class="btn btn-dark col b-radius-none">View listings</a>
+                                <!-- <a href="#" class="btn btn-dark col b-radius-none">View listings</a> -->
                                 <a href="#" class="btn btn-primary col ms-0 b-radius-none">Request info</a>
                             </div>
                         </div>
@@ -128,16 +129,16 @@ Breadcrumb -->
                                             <li><b>Price:</b> <?php echo $property_single_result['price'] ?> / Sq Ft</li>
                                             <li><b>Property Size:</b> <?php echo $property_single_result['square'] ?> Sq Ft</li>
                                             <li><b>Bedrooms:</b> <?php echo $property_single_result['num_of_rooms'] ?></li>
+                                            <li><b>floors:</b> <?php echo $property_single_result['num_of_rooms'] ?></li>
                                             <!-- <li><b>Bathrooms:</b> 2</li> -->
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
                                         <ul class="property-list list-unstyled">
-                                            <li><b>Garage:</b> 1</li>
-                                            <li><b>Garage Size:</b> 458 SqFt</li>
-                                            <li><b>Year Built:</b> 2019-01-09</li>
-                                            <li><b>Property Type:</b> Full Family Home</li>
-                                            <li><b>Property Status:</b> For rent</li>
+                                            <li><b>View:</b> 1</li>                                            
+                                            <li><b>What is near ?:</b> 458 SqFt</li>
+                                            <li><b>No of bed:</b> 2019-01-09</li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -168,7 +169,7 @@ Breadcrumb -->
                                 <h5>Description</h5>
                             </div>
                             <div class="col-sm-9">
-                                <p><?php echo $property_single_result['description_en'] ?></p>                               
+                                <p><?php echo $property_single_result['description_en'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -217,18 +218,17 @@ Breadcrumb -->
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <ul class="property-list list-unstyled mb-0">
-                                            <li><b>Address:</b> Virginia drive temple hills</li>
-                                            <li><b>State/County:</b> San francisco</li>
-                                            <li><b>Area:</b> Embarcadero</li>
+                                            <li> <?php echo $property_single_result['address_en'] ?></li>
+
                                         </ul>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <!-- <div class="col-sm-6">
                                         <ul class="property-list list-unstyled mb-0">
                                             <li><b>City:</b> San francisco</li>
                                             <li><b>Zip:</b> 4848494</li>
                                             <li><b>Country:</b> United States</li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -237,19 +237,19 @@ Breadcrumb -->
                     <div class="property-floor-plans">
                         <div class="row">
                             <div class="col-sm-3 mb-3 mb-sm-0">
-                                <h5>Floor plans</h5>
+                                <h5>Brochure</h5>
                             </div>
                             <div class="col-sm-9">
                                 <div class="accordion-style-2" id="accordion">
                                     <div class="card">
                                         <div class="card-header" id="headingOne">
                                             <h5 class="accordion-title mb-0">
-                                                <button class="btn btn-link d-flex ms-auto align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">First Floor <i class="fas fa-chevron-down fa-xs"></i></button>
+                                                <button class="btn btn-link d-flex ms-auto align-items-center" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">View Brochure <i class="fas fa-chevron-down fa-xs"></i></button>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse show accordion-content" aria-labelledby="headingOne" data-bs-parent="#accordion">
                                             <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate labore amet nulla a nobis iste consequuntur laudantium natus corporis, eveniet quo quidem perferendis sint illo autem, aut incidunt enim libero.</p>
+
                                                 <img class="img-fluid" src="images/property/floor-plans-01.jpg" alt="">
                                             </div>
                                         </div>
@@ -270,7 +270,7 @@ Breadcrumb -->
                             </div>
                             <div class="col-sm-9">
                                 <div class="row">
-                                    <div class="mb-3 col-sm-6 datetimepickers">
+                                    <div class="mb-3 col-md-6 datetimepickers">
                                         <div class="input-group date" id="datetimepicker-01" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#datetimepicker-01">
                                             <div class="input-group input-group-box" data-target="#datetimepicker-01" data-toggle="datetimepicker">
@@ -278,7 +278,7 @@ Breadcrumb -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 col-sm-6 datetimepickers">
+                                    <div class="mb-3 col-md-6 datetimepickers">
                                         <div class="input-group date" id="datetimepicker-03" data-target-input="nearest">
                                             <input type="text" class="form-control datetimepicker-input" placeholder="Time" data-target="#datetimepicker-03" />
                                             <div class="input-group input-group-box" data-target="#datetimepicker-03" data-toggle="datetimepicker">
@@ -286,13 +286,13 @@ Breadcrumb -->
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mb-3 col-sm-12">
+                                    <div class="mb-3 col-sm-6">
                                         <input type="text" class="form-control" placeholder="Name">
                                     </div>
-                                    <div class="mb-3 col-sm-12">
+                                    <div class="mb-3 col-sm-6">
                                         <input type="email" class="form-control" placeholder="Email">
                                     </div>
-                                    <div class="mb-3 col-sm-12">
+                                    <div class="mb-3 col-sm-6">
                                         <input type="Text" class="form-control" placeholder="Phone">
                                     </div>
                                     <div class="mb-3 col-sm-12">
@@ -338,7 +338,7 @@ Breadcrumb -->
                                 <span class="badge badge-md bg-info">Sale </span>
                             </div>
                             <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-                            
+
                             <div class="property-agent-popup">
                                 <a href="#"><i class="fas fa-camera"></i> 06</a>
                             </div>
@@ -356,7 +356,7 @@ Breadcrumb -->
                                 </ul>
                             </div>
                             <div class="property-btn">
-                                <a class="property-link" href="property-detail-style-01.html">See Details</a>                                
+                                <a class="property-link" href="property-detail-style-01.html">See Details</a>
                             </div>
                         </div>
                     </div>
@@ -364,55 +364,14 @@ Breadcrumb -->
 
 
 
-                
-                
+
+
             </div>
         </div>
     </section>
     <!--=================================
   Property details -->
 
-    <!--=================================
-Review -->
-    <section class="space-pb">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title">
-                        <h4>Leave a review for joana williams</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="review d-flex">
-                        <div class="review-avatar avatar avatar-xl me-3">
-                            <img class="img-fluid rounded-circle" src="images/avatar/01.jpg" alt="">
-                        </div>
-                        <div class="review-info flex-grow-1">
-                            <span class="mb-2 d-block">Rating:</span>
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star"></i></li>
-                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star"></i></li>
-                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star"></i></li>
-                                <li class="list-inline-item m-0 text-warning"><i class="fas fa-star-half-alt"></i></li>
-                                <li class="list-inline-item m-0 text-warning"><i class="far fa-star"></i></li>
-                            </ul>
-                            <div class="mb-3">
-                                <span class="mb-2 d-block">Rating comment:</span>
-                                <div class="mb-3">
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                            </div>
-                            <span> <a href="login.html"> <b>Login</b> </a> to leave a review</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=================================
-Review -->
 </div>
 
 <?php include "include/footer.php" ?>
