@@ -1,12 +1,12 @@
-<?php 
+<?php
 include "./config.php";
 include "include/header.php";
 
 $property = "SELECT * FROM `orexl_apartment_obj_type`";
-$property_data1 = mysqli_query($conn , $property);
+$property_data1 = mysqli_query($conn, $property);
 $days;
 $display_all_prop = "SELECT * ,datediff(`date_updated`, `date_created`) as days FROM `orexl_apartment`";
-$display_all_prop_data = mysqli_query($conn,$display_all_prop);
+$display_all_prop_data = mysqli_query($conn, $display_all_prop);
 
 //while($property_result = mysqli_fetch_assoc($property_data1)){ 
 //$days  = date_diff(date_create($property_result['date_updated']), date_create($property_result['date_created']));
@@ -46,18 +46,18 @@ banner -->
                             <div class="form-group col-lg-3 col-md-6">
                                 <label class="form-label">Property type</label>
                                 <select class="form-control basic-select">
-                                <?php while($property_result = mysqli_fetch_assoc($property_data1)){ ?>
-                  <option selected disabled>Property type</option>
-                  <option value=""><?php echo $property_result['name_en']?></option>
-                 <?php }?>
-                </select>
+                                    <?php while ($property_result = mysqli_fetch_assoc($property_data1)) { ?>
+                                        <option selected disabled>Property type</option>
+                                        <option value=""><?php echo $property_result['name_en'] ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                             <div class="form-group col-lg-3 col-md-6">
                                 <label class="form-label">Status</label>
                                 <select class="form-control basic-select">
-                  <option>For Rent</option>
-                  <option>For Sale</option>
-                </select>
+                                    <option>For Rent</option>
+                                    <option>For Sale</option>
+                                </select>
                             </div>
                             <div class="form-group d-flex col-lg-4">
                                 <div class="form-group-search">
@@ -79,41 +79,41 @@ banner -->
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Distance from location</label>
                                             <select class="form-control basic-select">
-                        <option>This area only</option>
-                        <option>Within 1 mile</option>
-                        <option>Within 3 miles</option>
-                        <option>Within 5 miles</option>
-                        <option>Within 10 miles</option>
-                        <option>Within 15 miles</option>
-                        <option>Within 30 miles</option>
-                      </select>
+                                                <option>This area only</option>
+                                                <option>Within 1 mile</option>
+                                                <option>Within 3 miles</option>
+                                                <option>Within 5 miles</option>
+                                                <option>Within 10 miles</option>
+                                                <option>Within 15 miles</option>
+                                                <option>Within 30 miles</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Bedrooms</label>
                                             <select class="form-control basic-select">
-                        <option>No max</option>
-                        <option>01</option>
-                        <option>02</option>
-                        <option>03</option>
-                      </select>
+                                                <option>No max</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Sort by</label>
                                             <select class="form-control basic-select">
-                        <option>Most popular</option>
-                        <option>Highest price</option>
-                        <option>Lowest price</option>
-                        <option>Most reduced</option>
-                      </select>
+                                                <option>Most popular</option>
+                                                <option>Highest price</option>
+                                                <option>Lowest price</option>
+                                                <option>Most reduced</option>
+                                            </select>
                                         </div>
                                         <div class="form-group col-md-3">
                                             <label class="form-label">Floor</label>
                                             <select class="form-control basic-select">
-                        <option>Select Floor</option>
-                        <option>01</option>
-                        <option>02</option>
-                        <option>03</option>
-                      </select>
+                                                <option>Select Floor</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -161,19 +161,19 @@ Browse properties -->
             <div class="col-12">
                 <div class="category">
                     <ul class="list-unstyled mb-0">
-                    <?php   //$property = "SELECT * FROM `orexl_apartment_obj_type`";
-                            $property_data1 = mysqli_query($conn , $property);
-                            while($property_result = mysqli_fetch_assoc($property_data1)){ ?>
-                        <li class="category-item">
-                            <a href="property-list.html">
-                                <div class="category-icon">
-                                    <i class="flaticon-building-2"></i>
-                                </div>
-                                <h6 class="mb-0"><?php echo $property_result['name_en']?></h6>
-                                <!-- <span>(457)</span> -->
-                            </a>
-                        </li>
-<?php }?>
+                        <?php   //$property = "SELECT * FROM `orexl_apartment_obj_type`";
+                        $property_data1 = mysqli_query($conn, $property);
+                        while ($property_result = mysqli_fetch_assoc($property_data1)) { ?>
+                            <li class="category-item">
+                                <a href="property-list.html">
+                                    <div class="category-icon">
+                                        <i class="flaticon-building-2"></i>
+                                    </div>
+                                    <h6 class="mb-0"><?php echo $property_result['name_en'] ?></h6>
+                                    <!-- <span>(457)</span> -->
+                                </a>
+                            </li>
+                        <?php } ?>
                         <!-- <li class="category-item">
                             <a href="property-list.html">
                                 <div class="category-icon">
@@ -268,59 +268,55 @@ Browse properties -->
             </div>
         </div>
         <div class="row">
-        <?php while($display_all_prop_data1 = mysqli_fetch_assoc($display_all_prop_data)){
-            
-            
-            
-            
-            
+            <?php while ($display_all_prop_data1 = mysqli_fetch_assoc($display_all_prop_data)) {
+
             ?>
-            <div class="col-sm-6 col-md-4">            
-                <div class="property-item">
-                    <div class="property-image bg-overlay-gradient-04">
+                <div class="col-sm-6 col-md-4">
+                    <div class="property-item">
+                        <div class="property-image bg-overlay-gradient-04">
 
-                    <?php
+                            <?php
 
-$property_image = "SELECT * FROM `orexl_apartment`";
-$property_image_data = mysqli_query($conn,$property_image);
-while($property_image_result = mysqli_fetch_assoc($property_image_data)){
-$prop_id = $property_image_result['id'];
+                            $property_image = "SELECT * FROM `orexl_apartment`";
+                            $property_image_data = mysqli_query($conn, $property_image);
+                            while ($property_image_result = mysqli_fetch_assoc($property_image_data)) {
+                                $prop_id = $property_image_result['id'];
 
 
-$properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
-$properties_images_data = mysqli_query($conn,$properties_images);
-$properties_images_result = mysqli_fetch_assoc($properties_images_data);
+                                $properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
+                                $properties_images_data = mysqli_query($conn, $properties_images);
+                                $properties_images_result = mysqli_fetch_assoc($properties_images_data);
 
-//    print_r ($properties_images_result['file_name']);
+                                //    print_r ($properties_images_result['file_name']);
 
-}?>
-                        <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name_modified']?>" alt="">
-                   
-                        <!-- <div class="property-lable">
+                            } ?>
+                            <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name_modified'] ?>" alt="">
+
+                            <!-- <div class="property-lable">
                             <span class="badge badge-md bg-primary">Bungalow</span>
                             <span class="badge badge-md bg-info">Sale </span>
                         </div> -->
-                        <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-                       
-                        <div class="property-agent-popup">
-                            <a href="#"><i class="fas fa-camera"></i> <?php echo $display_all_prop_data1['count_img']?></a>
+                            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
+
+                            <div class="property-agent-popup">
+                                <a href="#"><i class="fas fa-camera"></i> <?php echo $display_all_prop_data1['count_img'] ?></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="property-details">
-                        <div class="property-details-inner">
-                            <h5 class="property-title"><a href="property-details.php?id=<?php echo $display_all_prop_data1['id']?>"><?php echo $display_all_prop_data1['title_en']?> </a></h5>
-                            <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i><?php echo $display_all_prop_data1['address_en']?></span>
-                            <span class="property-agent-date"><i class="far fa-clock fa-md"></i><?php echo $display_all_prop_data1['days']?> days ago</span>
-                            <div class="property-price">₹ <?php echo $display_all_prop_data1['price']?><span> / month</span> </div>
-                            <ul class="property-info list-unstyled d-flex">
-                                <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Bed<span><?php echo $display_all_prop_data1['num_of_rooms']?></span></li>
-                                <!-- <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bath<span>2</span></li> -->
-                                <li class="flex-fill property-m-sqft"><i class="fas fa-ruler"></i>sqft<span><?php echo $display_all_prop_data1['square']?></span></li>
-                            </ul>
-                        </div>
-                        <div class="property-btn">
-                            <a class="property-link" href="property-details.php?id=<?php echo $display_all_prop_data1['id']?>">See Details</a>
-                            <!-- <ul class="property-listing-actions list-unstyled mb-0">
+                        <div class="property-details">
+                            <div class="property-details-inner">
+                                <h5 class="property-title"><a href="property-details.php?id=<?php echo $display_all_prop_data1['id'] ?>"><?php echo $display_all_prop_data1['title_en'] ?> </a></h5>
+                                <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i><?php echo $display_all_prop_data1['address_en'] ?></span>
+                                <span class="property-agent-date"><i class="far fa-clock fa-md"></i><?php echo $display_all_prop_data1['days'] ?> days ago</span>
+                                <div class="property-price">₹ <?php echo $display_all_prop_data1['price'] ?><span> / month</span> </div>
+                                <ul class="property-info list-unstyled d-flex">
+                                    <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Bed<span><?php echo $display_all_prop_data1['num_of_rooms'] ?></span></li>
+                                    <!-- <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bath<span>2</span></li> -->
+                                    <li class="flex-fill property-m-sqft"><i class="fas fa-ruler"></i>sqft<span><?php echo $display_all_prop_data1['square'] ?></span></li>
+                                </ul>
+                            </div>
+                            <div class="property-btn">
+                                <a class="property-link" href="property-details.php?id=<?php echo $display_all_prop_data1['id'] ?>">See Details</a>
+                                <!-- <ul class="property-listing-actions list-unstyled mb-0">
                                 <li class="property-compare">
                                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="Compare" href="#"><i class="fas fa-exchange-alt"></i></a>
                                 </li>
@@ -328,14 +324,14 @@ $properties_images_result = mysqli_fetch_assoc($properties_images_data);
                                     <a data-bs-toggle="tooltip" data-bs-placement="top" title="Favourite" href="#"><i class="far fa-heart"></i></a>
                                 </li>
                             </ul> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
             <?php } ?>
-           
+
             <div class="col-12 text-center">
                 <a class="btn btn-link" href="property-list.html"><i class="fas fa-plus"></i>View All Listings</a>
             </div>
@@ -516,25 +512,25 @@ testimonial -->
         <div class="row">
             <div class="col-lg-8">
                 <div class="owl-carousel owl-dots-bottom-left" data-nav-dots="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="0">
-                <?php  
-                $review = "SELECT * FROM `orexl_reviews`";
-                $review_data = mysqli_query($conn,$review);
-                while($review_result = mysqli_fetch_assoc($review_data)){
+                    <?php
+                    $review = "SELECT * FROM `orexl_reviews`";
+                    $review_data = mysqli_query($conn, $review);
+                    while ($review_result = mysqli_fetch_assoc($review_data)) {
 
-                ?>
-                <div class="item">
-                        <div class="testimonial">
-                            <div class="testimonial-content">
-                                <p><i class="quotes">"</i><?php echo $review_result['body']?></p>
-                            </div>
-                            <div class="testimonial-name">
-                                <h6 class="text-primary mb-1"><?php echo $review_result['name']?></h6>
-                                <!-- <span>Hamilton Rd. Willoughby</span> -->
+                    ?>
+                        <div class="item">
+                            <div class="testimonial">
+                                <div class="testimonial-content">
+                                    <p><i class="quotes">"</i><?php echo $review_result['body'] ?></p>
+                                </div>
+                                <div class="testimonial-name">
+                                    <h6 class="text-primary mb-1"><?php echo $review_result['name'] ?></h6>
+                                    <!-- <span>Hamilton Rd. Willoughby</span> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                   <?php } ?>
+                    <?php } ?>
 
 
                 </div>
@@ -623,7 +619,7 @@ Meet our agent -->
                             <img class="img-fluid rounded-circle" src="images/agent/04.jpg" alt="">
                         </div>
                         <div class="agent-info">
-                            <h6 class="mb-0"> <a href="agent-detail.html">Sara lisbon  </a></h6>
+                            <h6 class="mb-0"> <a href="agent-detail.html">Sara lisbon </a></h6>
                             <span class="text-primary font-sm">Land development</span>
                             <p class="mt-3 mb-0">If success is a process with a number of defined steps, then it is just like any other process.</p>
                         </div>
@@ -883,4 +879,4 @@ News, tips & articles -->
 
 <!--=================================
 call to action -->
-<?php include "include/footer.php"?>
+<?php include "include/footer.php" ?>

@@ -98,7 +98,6 @@ Breadcrumb -->
                                 // }
 
 
-
                                 $properties_images = "SELECT * FROM `orexl_images`where `id_object`='$prop_id'";
                                 $properties_images_data = mysqli_query($conn, $properties_images);
                                 while ($properties_images_result = mysqli_fetch_assoc($properties_images_data)) {
@@ -169,8 +168,7 @@ Breadcrumb -->
                                 <h5>Description</h5>
                             </div>
                             <div class="col-sm-9">
-                                <p>The home features private entry copper-clad door leading to salon with marble floors. Stunning great room has soaring 45 foot ceilings with glass windows, polished concrete floors, exposed brick & sculptural steel beams. The chef's kitchen has honed granite counters, high-end S/S appliances, French cabinets & gas range.</p>
-                                <p>Floor-to-ceiling windows accentuate the panoramic vistas that sweep across the Golden Gate Bridge, the downtown skyline, the artfully lit Bay Bridge and beyond. The floor plan features two bedroom suites, kitchen, living/dining room, two view terraces and ample storage space. </p>
+                                <p><?php echo $property_single_result['description_en'] ?></p>                               
                             </div>
                         </div>
                     </div>
@@ -328,6 +326,9 @@ Breadcrumb -->
             <hr class="mb-5 mt-0">
             <h5 class="mb-4">Similar properties</h5>
             <div class="row">
+
+
+
                 <div class="col-md-4">
                     <div class="property-item">
                         <div class="property-image bg-overlay-gradient-04">
@@ -337,19 +338,7 @@ Breadcrumb -->
                                 <span class="badge badge-md bg-info">Sale </span>
                             </div>
                             <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-                            <div class="property-agent">
-                                <div class="property-agent-image">
-                                    <img class="img-fluid" src="images/avatar/01.jpg" alt="">
-                                </div>
-                                <div class="property-agent-info">
-                                    <a class="property-agent-name" href="#">Alice Williams</a>
-                                    <span class="d-block">Company Agent</span>
-                                    <ul class="property-agent-contact list-unstyled">
-                                        <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                                        <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
                             <div class="property-agent-popup">
                                 <a href="#"><i class="fas fa-camera"></i> 06</a>
                             </div>
@@ -367,110 +356,16 @@ Breadcrumb -->
                                 </ul>
                             </div>
                             <div class="property-btn">
-                                <a class="property-link" href="property-detail-style-01.html">See Details</a>
-                                <ul class="property-listing-actions list-unstyled mb-0">
-                                    <li class="property-compare"><a data-bs-toggle="tooltip" data-placement="top" title="Compare" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                                    <li class="property-favourites"><a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#"><i class="far fa-heart"></i></a></li>
-                                </ul>
+                                <a class="property-link" href="property-detail-style-01.html">See Details</a>                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="property-item">
-                        <div class="property-image bg-overlay-gradient-04">
-                            <img class="img-fluid" src="images/property/grid/02.jpg" alt="">
-                            <div class="property-lable">
-                                <span class="badge badge-md bg-primary">Apartment</span>
-                                <span class="badge badge-md bg-info">New </span>
-                            </div>
-                            <div class="property-agent">
-                                <div class="property-agent-image">
-                                    <img class="img-fluid" src="images/avatar/02.jpg" alt="">
-                                </div>
-                                <div class="property-agent-info">
-                                    <a class="property-agent-name" href="#">John doe</a>
-                                    <span class="d-block">Company Agent</span>
-                                    <ul class="property-agent-contact list-unstyled">
-                                        <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                                        <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="property-agent-popup">
-                                <a href="#"><i class="fas fa-camera"></i> 12</a>
-                            </div>
-                        </div>
-                        <div class="property-details">
-                            <div class="property-details-inner">
-                                <h5 class="property-title"><a href="property-detail-style-01.html">Awesome family home</a></h5>
-                                <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Vermont dr. hephzibah</span>
-                                <span class="property-agent-date"><i class="far fa-clock fa-md"></i>2 months ago</span>
-                                <div class="property-price">$326.00<span> / month</span> </div>
-                                <ul class="property-info list-unstyled d-flex">
-                                    <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Bed<span>2</span></li>
-                                    <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bath<span>3</span></li>
-                                    <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>sqft<span>215m</span></li>
-                                </ul>
-                            </div>
-                            <div class="property-btn">
-                                <a class="property-link" href="property-detail-style-01.html">See Details</a>
-                                <ul class="property-listing-actions list-unstyled mb-0">
-                                    <li class="property-compare"><a data-bs-toggle="tooltip" data-placement="top" title="Compare" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                                    <li class="property-favourites"><a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="property-item">
-                        <div class="property-image bg-overlay-gradient-04">
-                            <img class="img-fluid" src="images/property/grid/03.jpg" alt="">
-                            <div class="property-lable">
-                                <span class="badge badge-md bg-primary">Summer House</span>
-                                <span class="badge badge-md bg-info">Hot </span>
-                            </div>
-                            <span class="property-trending" title="trending"><i class="fas fa-bolt"></i></span>
-                            <div class="property-agent">
-                                <div class="property-agent-image">
-                                    <img class="img-fluid" src="images/avatar/03.jpg" alt="">
-                                </div>
-                                <div class="property-agent-info">
-                                    <a class="property-agent-name" href="#">Felica queen</a>
-                                    <span class="d-block">Investment</span>
-                                    <ul class="property-agent-contact list-unstyled">
-                                        <li><a href="#"><i class="fas fa-mobile-alt"></i> </a></li>
-                                        <li><a href="#"><i class="fas fa-envelope"></i> </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="property-agent-popup">
-                                <a href="#"><i class="fas fa-camera"></i> 03</a>
-                            </div>
-                        </div>
-                        <div class="property-details">
-                            <div class="property-details-inner">
-                                <h5 class="property-title"><a href="property-detail-style-01.html">Contemporary apartment</a></h5>
-                                <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i>Newport st. mebane, nc</span>
-                                <span class="property-agent-date"><i class="far fa-clock fa-md"></i>6 months ago</span>
-                                <div class="property-price">$658.00<span> / month</span> </div>
-                                <ul class="property-info list-unstyled d-flex">
-                                    <li class="flex-fill property-bed"><i class="fas fa-bed"></i>Bed<span>3</span></li>
-                                    <li class="flex-fill property-bath"><i class="fas fa-bath"></i>Bath<span>4</span></li>
-                                    <li class="flex-fill property-m-sqft"><i class="far fa-square"></i>sqft<span>3,189m</span></li>
-                                </ul>
-                            </div>
-                            <div class="property-btn">
-                                <a class="property-link" href="property-detail-style-01.html">See Details</a>
-                                <ul class="property-listing-actions list-unstyled mb-0">
-                                    <li class="property-compare"><a data-bs-toggle="tooltip" data-placement="top" title="Compare" href="#"><i class="fas fa-exchange-alt"></i></a></li>
-                                    <li class="property-favourites"><a data-bs-toggle="tooltip" data-placement="top" title="Favourite" href="#"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+
+                
+                
             </div>
         </div>
     </section>
