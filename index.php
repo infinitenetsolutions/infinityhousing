@@ -294,7 +294,7 @@ $properties_images_result = mysqli_fetch_assoc($properties_images_data);
 //    print_r ($properties_images_result['file_name']);
 
 }?>
-                        <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name']?>" alt="">
+                        <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name_modified']?>" alt="">
                    
                         <!-- <div class="property-lable">
                             <span class="badge badge-md bg-primary">Bungalow</span>
@@ -308,7 +308,7 @@ $properties_images_result = mysqli_fetch_assoc($properties_images_data);
                     </div>
                     <div class="property-details">
                         <div class="property-details-inner">
-                            <h5 class="property-title"><a href="property-detail-style-01.html"><?php echo $display_all_prop_data1['title_en']?> </a></h5>
+                            <h5 class="property-title"><a href="property-details.php?id=<?php echo $display_all_prop_data1['id']?>"><?php echo $display_all_prop_data1['title_en']?> </a></h5>
                             <span class="property-address"><i class="fas fa-map-marker-alt fa-xs"></i><?php echo $display_all_prop_data1['address_en']?></span>
                             <span class="property-agent-date"><i class="far fa-clock fa-md"></i><?php echo $display_all_prop_data1['days']?> days ago</span>
                             <div class="property-price">₹ <?php echo $display_all_prop_data1['price']?><span> / month</span> </div>

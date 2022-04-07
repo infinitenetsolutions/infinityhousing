@@ -106,7 +106,7 @@ $location_data = mysqli_query($conn,$location);
         <nav class="navbar navbar-light bg-white navbar-static-top navbar-expand-lg header-sticky">
             <div class="container-fluid">
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"><i class="fas fa-align-left"></i></button>
-                <a class="navbar-brand" href="index-2.html">
+                <a class="navbar-brand" href="index.php">
                     <img class="img-fluid" src="images/logo.png" alt="logo">
                 </a>
                 <div class="navbar-collapse collapse justify-content-center">

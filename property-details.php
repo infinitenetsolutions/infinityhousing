@@ -85,11 +85,11 @@ while($property_image_result = mysqli_fetch_assoc($property_image_data)){
 $prop_id = $property_image_result['id'];
 
 // property type
-$property_type = "SELECT * FROM `orexl_apartment_obj_type`where ";
-$property_type_data = mysqli_query($conn,$property_type);
-while($property_type_result = mysqli_fetch_assoc($property_type_data)){
-print_r($property_type_result['type']);
-}
+// $property_type = "SELECT * FROM `orexl_apartment_obj_type`where ";
+// $property_type_data = mysqli_query($conn,$property_type);
+// while($property_type_result = mysqli_fetch_assoc($property_type_data)){
+// print_r($property_type_result['type']);
+// }
 
 
 
@@ -100,8 +100,8 @@ while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
 //    print_r ($properties_images_result['file_name']);?>
 
                       <div class="item">
-                                    <a class="portfolio-img" href="../realestate/uploads/objects/36/modified/<?php echo $properties_images_result['file_name']?>">
-                                    <img class="img-fluid" src="../realestate/uploads/objects/36/modified//<?php echo $properties_images_result['file_name']?>" alt=""></a>
+                                    <a class="portfolio-img" href="../realestate/uploads/objects/36/modified/<?php echo $properties_images_result['file_name_modified']?>">
+                                    <img class="img-fluid" src="../realestate/uploads/objects/36/modified//<?php echo $properties_images_result['file_name_modified']?>" alt=""></a>
                                 </div>
 
                                <?php }}?>
