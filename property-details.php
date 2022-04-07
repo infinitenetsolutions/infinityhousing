@@ -92,8 +92,8 @@ while($properties_images_result = mysqli_fetch_assoc($properties_images_data)){
 //    print_r ($properties_images_result['file_name']);?>
 
                       <div class="item">
-                                    <a class="portfolio-img" href="images/<?php echo $properties_images_result['file_name']?>">
-                                    <img class="img-fluid" src="images/<?php echo $properties_images_result['file_name']?>" alt=""></a>
+                                    <a class="portfolio-img" href="../realestate/uploads/objects/36/modified/<?php echo $properties_images_result['file_name']?>">
+                                    <img class="img-fluid" src="../realestate/uploads/objects/36/modified//<?php echo $properties_images_result['file_name']?>" alt=""></a>
                                 </div>
 
                                <?php }}?>
