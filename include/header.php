@@ -1,7 +1,7 @@
 <?php include "./config.php";
 
 $location = "SELECT * FROM `orexl_apartment_city`";
-$location_data = mysqli_query($conn,$location);
+$location_data = mysqli_query($conn, $location);
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ $location_data = mysqli_query($conn,$location);
 
 <body>
 
-<!--=================================header -->
+    <!--=================================header -->
     <header class="header">
         <div class="topbar">
             <div class="container-fluid">
@@ -55,9 +55,9 @@ $location_data = mysqli_query($conn,$location);
                                     Choose location<i class="fas fa-chevron-down ps-2"></i>
                                 </a>
                                 <div class="dropdown-menu mt-0" aria-labelledby="dropdownMenuButton">
-<?php while($location_result = mysqli_fetch_assoc($location_data)){ ?>
-                                    <a class="dropdown-item" href="#"><?php echo $location_result['name_en'];?></a>
-                                   <?php } ?>
+                                    <?php while ($location_result = mysqli_fetch_assoc($location_data)) { ?>
+                                        <a class="dropdown-item" href="#"><?php echo $location_result['name_en']; ?></a>
+                                    <?php } ?>
                                 </div>
                             </div>
                             <div class="me-auto d-inline-block">
@@ -111,11 +111,11 @@ $location_data = mysqli_query($conn,$location);
                 </a>
                 <div class="navbar-collapse collapse justify-content-center">
                     <ul class="nav navbar-nav">
-                    <li class="dropdown nav-item mega-menu">
+                        <li class="dropdown nav-item mega-menu">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">Buy<i class="fas fa-chevron-down fa-xs"></i></a>
                             <ul class="dropdown-menu megamenu">
-                              
-                            <li>
+
+                                <li>
                                     <div class="row">
                                         <div class="col-sm-6 col-lg-3">
                                             <h6 class="mb-3 nav-title">Popular Choices</h6>
@@ -157,13 +157,13 @@ $location_data = mysqli_query($conn,$location);
                                 </li>
                             </ul>
                         </li>
-                      
 
-                            <li class="dropdown nav-item mega-menu">
+
+                        <li class="dropdown nav-item mega-menu">
                             <a href="#" class="nav-link" data-bs-toggle="dropdown">Rent<i class="fas fa-chevron-down fa-xs"></i></a>
                             <ul class="dropdown-menu megamenu">
-                              
-                            <li>
+
+                                <li>
                                     <div class="row">
                                         <div class="col-sm-6 col-lg-3">
                                             <h6 class="mb-3 nav-title">Popular Choices</h6>
@@ -211,198 +211,8 @@ $location_data = mysqli_query($conn,$location);
                                 Sell <i class="fas fa-chevron-down fa-xs"></i>
                             </a>
                             <ul class="dropdown-menu megamenu">
-                              
-                              <li>
-                                      <div class="row">
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Popular Choices</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-under-banner.html">Ready to Move</a></li>
-                                                  <li><a href="search-style-above-banner.html">Owner Properties</a></li>
-                                                  <li><a href="search-style-below-banner.html">Budget Homes</a></li>
-  
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Property types</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-classic.html">Flats in Jamshedpur</a></li>
-                                                  <li><a href="search-style-with-filter.html">House for sale in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-02.html">Villa in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-03.html">Plot in Jamshedpur </a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Budget</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-feature-box.html">Under Rs 50 Lac</a></li>
-                                                  <li><a href="element-testimonials.html">50 Lac - 1 Cr</a></li>
-                                                  <li><a href="element-accordion.html">1 Cr - 1.5 Cr</a></li>
-                                                  <li><a href="element-tabs.html">Above 1.5 Cr</a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Explore </h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-typography.html">Typography</a></li>
-                                                  <li><a href="element-counter.html">counter</a></li>
-                                                  <li><a href="element-countdown.html">Countdown</a></li>
-                                                  <li><a href="element-category.html">Category</a></li>
-                                              </ul>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                        </li>
-                        <li class="nav-item dropdown mega-menu">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home Loans <i class="fas fa-chevron-down fa-xs"></i>
-                            </a>
-                            <ul class="dropdown-menu megamenu">
-                              
-                              <li>
-                                      <div class="row">
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Popular Choices</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-under-banner.html">Ready to Move</a></li>
-                                                  <li><a href="search-style-above-banner.html">Owner Properties</a></li>
-                                                  <li><a href="search-style-below-banner.html">Budget Homes</a></li>
-  
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Property types</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-classic.html">Flats in Jamshedpur</a></li>
-                                                  <li><a href="search-style-with-filter.html">House for sale in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-02.html">Villa in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-03.html">Plot in Jamshedpur </a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Budget</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-feature-box.html">Under Rs 50 Lac</a></li>
-                                                  <li><a href="element-testimonials.html">50 Lac - 1 Cr</a></li>
-                                                  <li><a href="element-accordion.html">1 Cr - 1.5 Cr</a></li>
-                                                  <li><a href="element-tabs.html">Above 1.5 Cr</a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Explore </h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-typography.html">Typography</a></li>
-                                                  <li><a href="element-counter.html">counter</a></li>
-                                                  <li><a href="element-countdown.html">Countdown</a></li>
-                                                  <li><a href="element-category.html">Category</a></li>
-                                              </ul>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                        </li>
-                        <li class="dropdown nav-item mega-menu">
-                            <a href="#" class="nav-link" data-bs-toggle="dropdown">Property Services<i class="fas fa-chevron-down fa-xs"></i></a>
-                            <ul class="dropdown-menu megamenu">
-                              
-                              <li>
-                                      <div class="row">
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Popular Choices</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-under-banner.html">Ready to Move</a></li>
-                                                  <li><a href="search-style-above-banner.html">Owner Properties</a></li>
-                                                  <li><a href="search-style-below-banner.html">Budget Homes</a></li>
-  
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Property types</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-classic.html">Flats in Jamshedpur</a></li>
-                                                  <li><a href="search-style-with-filter.html">House for sale in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-02.html">Villa in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-03.html">Plot in Jamshedpur </a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Budget</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-feature-box.html">Under Rs 50 Lac</a></li>
-                                                  <li><a href="element-testimonials.html">50 Lac - 1 Cr</a></li>
-                                                  <li><a href="element-accordion.html">1 Cr - 1.5 Cr</a></li>
-                                                  <li><a href="element-tabs.html">Above 1.5 Cr</a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Explore </h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-typography.html">Typography</a></li>
-                                                  <li><a href="element-counter.html">counter</a></li>
-                                                  <li><a href="element-countdown.html">Countdown</a></li>
-                                                  <li><a href="element-category.html">Category</a></li>
-                                              </ul>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                        </li>
-                        <li class="nav-item dropdown mega-menu">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                MB Advice <i class="fas fa-chevron-down fa-xs"></i>
-                            </a>
-                            <ul class="dropdown-menu megamenu">
-                              
-                              <li>
-                                      <div class="row">
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Popular Choices</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-under-banner.html">Ready to Move</a></li>
-                                                  <li><a href="search-style-above-banner.html">Owner Properties</a></li>
-                                                  <li><a href="search-style-below-banner.html">Budget Homes</a></li>
-  
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Property types</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="search-style-classic.html">Flats in Jamshedpur</a></li>
-                                                  <li><a href="search-style-with-filter.html">House for sale in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-02.html">Villa in Jamshedpur</a></li>
-                                                  <li><a href="search-style-advanced-03.html">Plot in Jamshedpur </a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Budget</h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-feature-box.html">Under Rs 50 Lac</a></li>
-                                                  <li><a href="element-testimonials.html">50 Lac - 1 Cr</a></li>
-                                                  <li><a href="element-accordion.html">1 Cr - 1.5 Cr</a></li>
-                                                  <li><a href="element-tabs.html">Above 1.5 Cr</a></li>
-                                              </ul>
-                                          </div>
-                                          <div class="col-sm-6 col-lg-3">
-                                              <h6 class="mb-3 nav-title">Explore </h6>
-                                              <ul class="list-unstyled mt-lg-3">
-                                                  <li><a href="element-typography.html">Typography</a></li>
-                                                  <li><a href="element-counter.html">counter</a></li>
-                                                  <li><a href="element-countdown.html">Countdown</a></li>
-                                                  <li><a href="element-category.html">Category</a></li>
-                                              </ul>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                        </li>
-                        <li class="nav-item dropdown mega-menu">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Help <i class="fas fa-chevron-down fa-xs"></i>
-                            </a>
-                            <ul class="dropdown-menu megamenu">
-                              
-                            <li>
+
+                                <li>
                                     <div class="row">
                                         <div class="col-sm-6 col-lg-3">
                                             <h6 class="mb-3 nav-title">Popular Choices</h6>
@@ -444,14 +254,73 @@ $location_data = mysqli_query($conn,$location);
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown mega-menu">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Home Loans <i class="fas fa-chevron-down fa-xs"></i>
+                            </a>
+                            <ul class="dropdown-menu megamenu">
+
+                                <li>
+                                    <div class="row">
+                                        <div class="col-sm-6 col-lg-3">
+                                            <h6 class="mb-3 nav-title">Popular Choices</h6>
+                                            <ul class="list-unstyled mt-lg-3">
+                                                <li><a href="search-style-under-banner.html">Ready to Move</a></li>
+                                                <li><a href="search-style-above-banner.html">Owner Properties</a></li>
+                                                <li><a href="search-style-below-banner.html">Budget Homes</a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3">
+                                            <h6 class="mb-3 nav-title">Property types</h6>
+                                            <ul class="list-unstyled mt-lg-3">
+                                                <li><a href="search-style-classic.html">Flats in Jamshedpur</a></li>
+                                                <li><a href="search-style-with-filter.html">House for sale in Jamshedpur</a></li>
+                                                <li><a href="search-style-advanced-02.html">Villa in Jamshedpur</a></li>
+                                                <li><a href="search-style-advanced-03.html">Plot in Jamshedpur </a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3">
+                                            <h6 class="mb-3 nav-title">Budget</h6>
+                                            <ul class="list-unstyled mt-lg-3">
+                                                <li><a href="element-feature-box.html">Under Rs 50 Lac</a></li>
+                                                <li><a href="element-testimonials.html">50 Lac - 1 Cr</a></li>
+                                                <li><a href="element-accordion.html">1 Cr - 1.5 Cr</a></li>
+                                                <li><a href="element-tabs.html">Above 1.5 Cr</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-3">
+                                            <h6 class="mb-3 nav-title">Explore </h6>
+                                            <ul class="list-unstyled mt-lg-3">
+                                                <li><a href="element-typography.html">Typography</a></li>
+                                                <li><a href="element-counter.html">counter</a></li>
+                                                <li><a href="element-countdown.html">Countdown</a></li>
+                                                <li><a href="element-category.html">Category</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mega-menu">
+                            <a href="contact-us.php" class="nav-link" >Contact us</a>
+                            
+                        </li>
+                      
+                        <li class="nav-item dropdown mega-menu">
+                            <a class="nav-link " href="question-answer.php">
+                                Help 
+                            </a>
+                        
+                        </li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pay Your Rent 
-                            </a></li>
+                            </a></li> -->
                     </ul>
                 </div>
                 <div class="add-listing d-none d-sm-block">
-                    <a class="btn btn-primary btn-md" href="submit-property.html"> <i class="fa fa-plus-circle"></i>Add listing </a>
+                    <a class="btn btn-primary btn-md" href="submit-property.php"> <i class="fa fa-plus-circle"></i>Add listing </a>
                 </div>
             </div>
         </nav>
@@ -489,70 +358,40 @@ $location_data = mysqli_query($conn,$location);
                                 <div class="col-sm-6 d-grid">
                                     <button type="submit" class="btn btn-primary">Sign up</button>
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                                        <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
-                                    </ul>
-                                </div>
+                               
                             </form>
-                            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
-                                <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
-                                <form class="row">
-                                    <div class="col-sm-6">
-                                        <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
-                                    </div>
-                                </form>
-                            </div>
+
                         </div>
                         <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
                             <form class="row mt-4 mb-5 align-items-center">
-                                <div class="mb-3 col-sm-12">
-                                    <input type="text" class="form-control" placeholder="Username">
+                                <div class="mb-3 col-sm-6">
+                                    <!-- <label  class="form-check-label">Select Type</label> -->
+                                    <!-- <input type="text" class="form-control" placeholder="Username"> -->
+                                    <select name="" id="" class="form-control">
+                                        <option value="" selected disabled>Select Type</option>
+                                    </select>
                                 </div>
-                                <div class="mb-3 col-sm-12">
+                                <div class="mb-3 col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Enter Name">
+                                </div>
+                                <div class="mb-3 col-sm-6">
                                     <input type="email" class="form-control" placeholder="Email Address">
                                 </div>
-                                <div class="mb-3 col-sm-12">
+                                <div class="mb-3 col-sm-6">
                                     <input type="Password" class="form-control" placeholder="Password">
                                 </div>
-                                <div class="mb-3 col-sm-12">
+                                <div class="mb-3 col-sm-6">
                                     <input type="Password" class="form-control" placeholder="Confirm Password">
+                                </div>
+                                <div class="mb-3 col-sm-6">
+                                    <input type="number" class="form-control" placeholder="Phone Number">
                                 </div>
                                 <div class="col-sm-6 d-grid">
                                     <button type="submit" class="btn btn-primary">Sign up</button>
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled d-flex mb-1 mt-sm-0 mt-3">
-                                        <li class="me-1"><a href="#"><b>Already Registered User? Click here to login</b></a></li>
-                                    </ul>
-                                </div>
+                                
                             </form>
-                            <div class="login-social-media border ps-4 pe-4 pb-4 pt-0 rounded">
-                                <div class="mb-4 d-block text-center"><b class="bg-white ps-2 pe-2 mt-3 d-block">Login or Sign in with</b></div>
-                                <form class="row">
-                                    <div class="col-sm-6">
-                                        <a class="btn facebook-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-facebook-f"></i>Login with Facebook</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn twitter-bg social-bg-hover d-block mb-3" href="#"><span><i class="fab fa-twitter"></i>Login with Twitter</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn google-bg social-bg-hover d-block mb-3 mb-sm-0" href="#"><span><i class="fab fa-google"></i>Login with Google</span></a>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <a class="btn linkedin-bg social-bg-hover d-block" href="#"><span><i class="fab fa-linkedin-in"></i>Login with Linkedin</span></a>
-                                    </div>
-                                </form>
-                            </div>
+
                         </div>
                     </div>
                 </div>
