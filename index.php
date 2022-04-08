@@ -287,9 +287,9 @@ Browse properties -->
                                 $properties_images_data = mysqli_query($conn, $properties_images);
                                 $properties_images_result = mysqli_fetch_assoc($properties_images_data);
 
+                                
                                 //    print_r($properties_images_result['file_name_modified']);
-
-                            } ?>
+                            //} ?>
                             <img class="img-fluid" src="../realestate/uploads/objects/<?php echo $prop_id ?>/modified/thumb_<?php echo $properties_images_result['file_name_modified'] ?>" alt="">
 
                             <!-- <div class="property-lable">
